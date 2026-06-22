@@ -1,8 +1,1 @@
-# Michele Valecce - Archivio professionale V9.1
-
-Aggiornamento di rifinitura:
-- menu superiore semplificato;
-- rassegna stampa ripulita dai duplicati;
-- tre link reali agli articoli online;
-- sezione ristoranti con BBQ All-Stars Milano prima di BBQ All-Stars Monza;
-- correzioni testuali mirate.
+Michele Valecce Archivio Professionale - V9.2 fix mobile bottoni hero e video responsive.
