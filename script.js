@@ -71,3 +71,16 @@ const lb=document.getElementById('lightbox');const img=lb.querySelector('img');d
     window.addEventListener('scroll', updateBackTop, { passive: true });
   }
 })();
+
+
+// Versione 2.0 — protezione discreta delle immagini e navigazione accessibile.
+(() => {
+  document.addEventListener('contextmenu', event => {
+    if (event.target.closest('img, video, .kobe-feature, .recognition-card')) {
+      event.preventDefault();
+    }
+  });
+  document.addEventListener('dragstart', event => {
+    if (event.target.matches('img')) event.preventDefault();
+  });
+})();
