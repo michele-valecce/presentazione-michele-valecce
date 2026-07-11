@@ -801,3 +801,137 @@ img{user-select:none;-webkit-user-drag:none}
     background:#120f0c;
   }
 }
+
+
+/* =========================================================
+   VERSIONE 2.5 — AUDIO VIDEO E BLOCCO KOBE 2018
+   ========================================================= */
+.audio-cue{
+  margin:0 0 14px;
+  color:var(--mv-gold-light,#f0cf82);
+  font-weight:900;
+  letter-spacing:.02em;
+  text-align:center;
+  font-size:clamp(15px,1.5vw,19px);
+}
+.audio-video-wrap{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border-radius:18px;
+  background:#000;
+}
+.audio-video-wrap video{
+  display:block;
+  width:100%;
+  border-radius:inherit;
+}
+.audio-toggle{
+  position:absolute;
+  left:18px;
+  bottom:18px;
+  z-index:4;
+  border:1px solid rgba(240,207,130,.75);
+  border-radius:999px;
+  padding:12px 18px;
+  background:rgba(5,4,3,.90);
+  color:#fff4e8;
+  font:800 13px/1 Inter,system-ui,sans-serif;
+  letter-spacing:.04em;
+  cursor:pointer;
+  box-shadow:0 12px 34px rgba(0,0,0,.45);
+  backdrop-filter:blur(10px);
+}
+.audio-toggle:hover,.audio-toggle:focus-visible{
+  background:#d7ab46;
+  color:#120d08;
+  outline:none;
+}
+.audio-toggle.is-on{
+  background:#d7ab46;
+  color:#120d08;
+}
+.milano-feature .video-frame.portrait{
+  overflow:visible;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.milano-feature .audio-video-wrap{
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 25px 90px rgba(0,0,0,.45);
+  border-radius:28px;
+}
+.video-block .audio-cue{
+  grid-column:1/-1;
+  margin-bottom:-8px;
+}
+.video-block .audio-video-wrap{
+  align-self:center;
+}
+
+.kobe-table-section{
+  padding-top:105px;
+  padding-bottom:105px;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(215,171,70,.14),transparent 34%),
+    linear-gradient(180deg,#050403,#0b0705 55%,#050403);
+  border-top:1px solid rgba(215,171,70,.28);
+  border-bottom:1px solid rgba(215,171,70,.20);
+}
+.kobe-table-inner{
+  width:min(1180px,100%);
+  margin:0 auto;
+  text-align:center;
+}
+.kobe-table-inner h2{
+  max-width:980px;
+  margin:14px auto 14px;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(44px,6vw,84px);
+  line-height:.96;
+  color:var(--mv-ivory,#fff4e8);
+  letter-spacing:-.035em;
+}
+.kobe-table-subtitle{
+  margin:0 auto 38px;
+  color:var(--mv-gold-light,#f0cf82);
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,2.5vw,36px);
+  line-height:1.15;
+}
+.kobe-table-figure{
+  width:min(920px,100%);
+  margin:0 auto;
+  padding:12px;
+  border:1px solid rgba(215,171,70,.34);
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(215,171,70,.09),rgba(255,255,255,.02));
+  box-shadow:0 34px 110px rgba(0,0,0,.55);
+}
+.kobe-table-figure img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:760px;
+  object-fit:contain;
+  border-radius:20px;
+  background:#050403;
+}
+.kobe-table-copy{
+  max-width:870px;
+  margin:30px auto 0;
+  color:#ddcbb7;
+  font-size:17px;
+  line-height:1.75;
+}
+@media(max-width:700px){
+  .audio-cue{font-size:15px;line-height:1.4;margin-bottom:10px}
+  .audio-toggle{left:12px;bottom:12px;padding:11px 15px;font-size:12px}
+  .kobe-table-section{padding:72px 20px}
+  .kobe-table-inner h2{font-size:clamp(42px,12vw,58px)}
+  .kobe-table-subtitle{font-size:23px;margin-bottom:26px}
+  .kobe-table-figure{padding:8px;border-radius:22px}
+  .kobe-table-figure img{border-radius:15px}
+  .kobe-table-copy{font-size:15.5px;line-height:1.68}
+}

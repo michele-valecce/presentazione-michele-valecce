@@ -84,3 +84,33 @@ const lb=document.getElementById('lightbox');const img=lb.querySelector('img');d
     if (event.target.matches('img')) event.preventDefault();
   });
 })();
+
+
+// Versione 2.5 — controllo audio evidente per i video emozionali.
+(() => {
+  document.querySelectorAll('.audio-video-wrap').forEach(wrapper => {
+    const video = wrapper.querySelector('video');
+    const button = wrapper.querySelector('.audio-toggle');
+    if (!video || !button) return;
+
+    const syncButton = () => {
+      const audioOn = !video.muted && video.volume > 0;
+      button.classList.toggle('is-on', audioOn);
+      button.textContent = audioOn ? '🔇 Disattiva audio' : '🔊 Attiva audio';
+      button.setAttribute('aria-label', audioOn ? 'Disattiva l’audio del video' : 'Attiva l’audio del video');
+    };
+
+    video.muted = true;
+    syncButton();
+
+    button.addEventListener('click', async () => {
+      video.muted = !video.muted;
+      if (!video.muted) {
+        try { await video.play(); } catch (error) { /* Il browser può richiedere un secondo tocco. */ }
+      }
+      syncButton();
+    });
+
+    video.addEventListener('volumechange', syncButton);
+  });
+})();
