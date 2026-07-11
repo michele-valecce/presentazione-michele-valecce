@@ -76,7 +76,7 @@ const lb=document.getElementById('lightbox');const img=lb.querySelector('img');d
 // Versione 2.0 — protezione discreta delle immagini e navigazione accessibile.
 (() => {
   document.addEventListener('contextmenu', event => {
-    if (event.target.closest('img, video, .kobe-feature, .recognition-card')) {
+    if (event.target.closest('img, video, .kobe-feature, .recognition-card, .current-role-card')) {
       event.preventDefault();
     }
   });
