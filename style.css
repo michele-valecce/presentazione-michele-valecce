@@ -755,3 +755,17 @@ img{user-select:none;-webkit-user-drag:none}
 @media(max-width:390px){
   .current-role-copy h3{font-size:18px;}
 }
+
+
+/* =========================================================
+   VERSIONE 2.4 — STRUTTURA EDITORIALE E CARD AL GIRARROSTO
+   ========================================================= */
+/* La fotografia composita di Al Girarrosto deve essere visibile per intero
+   su desktop, senza tagliare né lo chef né la griglia. */
+@media (min-width:901px){
+  .current-role-media-single img{
+    object-fit:contain;
+    object-position:center center;
+    background:#120f0c;
+  }
+}
